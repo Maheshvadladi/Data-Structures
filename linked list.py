@@ -52,7 +52,7 @@ print("None")'''
 
 # Insert all the data from begining in a single linked list
 
-class node:
+'''class node:
     def __init__(self, data):
         self.data = data
         self.next = None
@@ -72,4 +72,30 @@ print("Linked List:")
 while temp:
     print(temp.data,end = "->")
     temp = temp.next
-print("Tail")
+print("Tail")'''
+
+# insert at begining at DLL
+
+class node:
+    def __init__(self, data):
+        self.data = data
+        self.prev = None
+        self.next = None
+def insert_begin(head, data):
+    newnode = node(data)
+    if head:
+        head.prev = newnode
+        newnode.next = head
+    return newnode
+def display(head):
+    temp = head
+    while temp:
+        print(temp.data, end="->")
+        temp = temp.next
+    print("None")
+head = None
+n = int(input("Enter number of nodes:"))
+for _ in range(n):
+    val = int(input("Enter value:"))
+    head = insert_begin(head,val)
+display(head)
