@@ -1,6 +1,6 @@
 # Detecting cycle in singly linked list
 
-class node:
+'''class node:
     def __init__(self, data):
         self.data = data
         self.next = None
@@ -56,4 +56,4 @@ print("Inserted Linkedlist:")
 display()
 pos = int(input("Enter the position:"))
 create_cycle(pos)
-detect_cycle()
+detect_cycle()'''
