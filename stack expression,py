@@ -1,0 +1,60 @@
+# check balance of the paranthesis
+'''s = input("Enter an expression: ")
+stack = []
+valid = True
+for ch in s:
+    if ch in "({[":
+        stack.append(ch)
+    elif ch in ")}]":
+        if len(stack) == 0:
+            valid = False
+            break
+        top = stack.pop()
+        if (ch == ")" and top != "(") or \
+        (ch == "}" and top != "{") or \
+        (ch == "]" and top != "["):
+            valid = False
+            break
+if len(stack) != 0:
+    valid = False
+if valid:
+    print("Balenced.....")
+else:
+    print("Not Balenced.....")'''
+
+# Balance of the paranthesis
+'''s = input("Enter an expression: ")
+stack = []
+result = ""
+for ch in s:
+    if ch == "(":
+        stack.append(ch)
+        result += ch
+    elif ch == ")":
+        if len(stack) > 0:
+            stack.pop()
+            result += ch
+        else:
+            result = "(" + result + ")"
+while len(stack) > 0:
+    result += ")"
+    stack.pop()
+print("Balanced: ", result)'''
+
+# infix to postfix conversion
+s = input("Enter infix expression: ")
+stack = []
+result = ""
+priority = {"+" : 1, "-": 1, "*" : 2, "/" : 2}
+for ch in s:
+    if ch .isalnum():
+        result += ch
+    elif ch == "(":
+        stack.append(ch)
+    elif ch == ")":
+        while stack and stack[-1] != "(" and priority[ch] <= priority(stack[-1]):
+            result += stack.pop()
+        stack.append(ch)
+while stack:
+    result += stack.pop()
+print("Postfix:", result)

@@ -22,7 +22,7 @@ print(len(stack))
 
 print(len(stack)==0)'''
 
-stack=[]
+'''stack=[]
 size = 2
 if len(stack) < size:
     stack.append(10)
@@ -36,4 +36,4 @@ if len(stack) < size:
     stack.append(30)
 else:
     print("Stack Overflow...")
-print(stack)
+print(stack)'''
