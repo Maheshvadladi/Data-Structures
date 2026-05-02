@@ -76,7 +76,7 @@ while True:
 
 # application of stack for menu driven operations using file
 
-undo_stack = []
+'''undo_stack = []
 redo_stack = []
 filename = "sample.txt"
 try:
@@ -123,4 +123,4 @@ while True:
     elif choice == 5:
         break
     else:
-        print("Invalid choice .... try again")
+        print("Invalid choice .... try again")'''
