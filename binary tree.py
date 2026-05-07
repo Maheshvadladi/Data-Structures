@@ -68,7 +68,7 @@ root = tree(arr, 0, n)
 print("Tree data: ", preorder(root))'''
 
 # postorder traversel
-class node:
+'''class node:
     def __init__(self, data):
         self.data = data
         self.left = None
@@ -92,4 +92,4 @@ for i in range(n):
     val = int(input("Enter value: "))
     arr.append(val)
 root = tree(arr, 0, n)
-print("Tree data: ", postorder(root))
+print("Tree data: ", postorder(root))'''
